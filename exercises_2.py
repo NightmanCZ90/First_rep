@@ -65,3 +65,25 @@ def min_max_key_in_dictionary(dct):
     return [min, max]
     
 # print(min_max_key_in_dictionary({2:'a', 7:'b', 1:'c',10:'d',4:'e'}))
+
+'''
+find_greater_numbers([1,2,3]) # 3 
+find_greater_numbers([6,1,2,7]) # 4
+find_greater_numbers([5,4,3,2,1]) # 0
+find_greater_numbers([]) # 0
+'''
+
+def find_greater_numbers(lst1):
+    count = 0
+    for num1 in lst1:
+        # print(num1)
+        index = lst1.index(num1)
+        # print(index)
+        lst2 = lst1[index+1:]
+        # print(lst2)
+        for num2 in lst2:
+            if num1 < num2:
+                count += 1
+    return count
+
+# print(find_greater_numbers([1,2,3]))
