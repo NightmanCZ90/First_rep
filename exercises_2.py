@@ -87,3 +87,18 @@ def find_greater_numbers(lst1):
     return count
 
 # print(find_greater_numbers([1,2,3]))
+
+'''
+two_oldest_ages( [1, 2, 10, 8] ) # [8, 10]
+two_oldest_ages( [6,1,9,10,4] ) # [9,10]
+two_oldest_ages( [4,25,3,20,19,5] ) # [20,25]
+'''
+
+def two_oldest_ages(lst):
+    oldest_1 = max(lst)
+    lst.remove(oldest_1)
+    oldest_2 = max(lst)
+    return [oldest_2, oldest_1]
+
+
+# two_oldest_ages( [4,25,3,20,19,5] )
