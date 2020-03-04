@@ -186,3 +186,36 @@ def three_odd_numbers(lst):
         if (lst[i]+lst[i+1]+lst[i+2]) % 2 != 0:
             return True
     return False
+
+'''
+mode([2,4,1,2,3,3,4,4,5,4,4,6,4,6,7,4]) # 4
+'''
+
+# define mode below:
+def mode(lst):
+    uniq = {}
+    for num in lst:
+        uniq[num] = lst.count(num)
+    maxx = max(uniq.values())
+    for key,val in uniq.items():
+        if val == maxx:
+            return key
+
+# mode([2,4,1,2,3,3,4,4,5,4,4,6,4,6,7,4])
+
+'''
+rAvg = running_average()
+rAvg(10) # 10.0
+rAvg(11) # 10.5
+rAvg(12) # 11
+
+rAvg2 = running_average()
+rAvg2(1) # 1
+rAvg2(3) # 2
+'''
+total = 0
+count = 0
+def running_average(num):
+    total += num
+    count += 1
+    return total/count
